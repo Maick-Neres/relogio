@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relógio</title>
+  <script src="javascript.js" defer></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2? family= Open+Sans & display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(-45deg, #e73c7e, #ee7752,#0430f7d8, #00ff0dda );
+      background-size: 400% 400%;
+      animation: anima 10s ease infinite;
+    }
+
+    @keyframes anima {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+
+    main {
+      width: 600px;
+      padding: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: transparent;
+      border-radius: 3px;
+      box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
+      ;
+    }
+
+    section {
+      width: 100%;
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+
+    }
+
+    #horas,
+    #minutos,
+    #segundos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: 1px solid black;
+      background-color: black;
+      border-radius: 15px;
+      font-size: 4em;
+      font-weight: 400;
+      width: 200px;
+      height: 200px;
+      color: white;
+      gap: 10px;
+      
+      transition: transform .7s;
+    }
+
+    #horas:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+    #minutos:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+    #segundos:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+    span {
+      font-size: 20px;
+      font-weight: 200;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+
+      <span id="horas">
+        <span>Horas</span>
+      </span>
+
+      <span id="minutos">
+        <span>Minutos</span>
+      </span>
+
+      <span id="segundos">
+        <span>Segundos</span>
+      </span>
+
+    </section>
+  </main>
+</body>
+
+</html>
